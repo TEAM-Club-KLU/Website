@@ -1,0 +1,108 @@
+
+
+.contact_section,
+.registration_section {
+  padding: 80px 0;
+}
+
+.heading_container {
+  text-align: center;
+}
+
+.heading_container h2 {
+  font-size: 36px;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.heading_container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact_section form,
+.registration_section form {
+  margin-top: 30px;
+}
+
+.contact_section label,
+.registration_section label {
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+.conditional-fields {
+  display: none;
+}
+
+#loading {
+  display: none;
+}
+.contact_section input,
+.contact_section select,
+.registration_section input,
+.registration_section select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact_section button,
+.registration_section button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#loadingModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+#telegramLinkModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+#loading {
+  display: none;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.mandatory-field {
+  border: 1px solid red;
+}
+
+.pale-button {
+  background-color: #d3d3d3;
+}

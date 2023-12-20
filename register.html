@@ -31,102 +31,7 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
   <!-- Consolidated CSS for contact and registration forms -->
-  <style>
-
-    .contact_section,
-    .registration_section {
-      padding: 80px 0;
-    }
-
-    .heading_container {
-      text-align: center;
-    }
-
-    .heading_container h2 {
-      font-size: 36px;
-      color: #222;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .heading_container img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .contact_section form,
-    .registration_section form {
-      margin-top: 30px;
-    }
-
-    .contact_section label,
-    .registration_section label {
-      font-size: 16px;
-      color: #222;
-      font-weight: 500;
-      margin-bottom: 10px;
-      display: block;
-    }
-    .conditional-fields {
-      display: none;
-    }
-
-    #loading {
-      display: none;
-    }
-    .contact_section input,
-    .contact_section select,
-    .registration_section input,
-    .registration_section select {
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
-      color: #555;
-    }
-
-    .contact_section button,
-    .registration_section button {
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #loadingModal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    #telegramLinkModal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    #loading {
-      display: none;
-    }
-  </style>
+ <link rel="stylesheet" href="css/registration_form.css" />
 </head>
 
 <body class="sub_page">
@@ -282,16 +187,16 @@
               </div>
   
               <!-- Loading GIF Modal -->
-              <div id="loadingModal">
-                <!-- Your Giphy loading GIF -->
-                <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
-                  <iframe src="https://giphy.com/embed/LR5ZBwZHv02lmpVoEU" width="100%" height="100%"
-                    style="position: absolute;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                </div>
-                <p>Submitting...</p>
+            <div id="loadingModal">
+              <!-- Your Giphy loading GIF -->
+              <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+                <iframe src="https://giphy.com/embed/LR5ZBwZHv02lmpVoEU" width="100%" height="100%"
+                  style="position: absolute;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
               </div>
-  
-             <!-- Telegram Link Modal -->
+              <p>Submitting...</p>
+            </div>
+
+            <!-- Telegram Link Modal -->
             <div class="conditional-fields" id="telegramLinkModal" style="display:none;">
               <p>Thank you for registering! Join our Telegram group:</p>
               <a href="TELEGRAM_GROUP_LINK" target="_blank">
@@ -299,8 +204,11 @@
               </a>
             </div>
 
+            <!-- Error Message -->
+            <p class="error-message" id="errorMessage"></p>
+
             <div class="d-flex">
-              <button type="button" onclick="submitForm()">REGISTER</button>
+              <button type="button" onclick="validateAndSubmit()" class="pale-button">REGISTER</button>
             </div>
 
           </form>
@@ -338,39 +246,8 @@
   <script src="js/bootstrap.js"></script>
 
  <!-- Script to show/hide conditional fields and display loading GIF Modal -->
- <script>
-  function showTelegramLink() {
-    $('#loadingModal').hide();
-    $('#telegramLinkModal').show();
-  }
-
-  function submitForm() {
-    // Display loading GIF Modal
-    $('#loadingModal').show();
-
-    // Simulate processing and display Telegram link Modal after a delay
-    setTimeout(function () {
-      $('#registrationForm').submit();
-      showTelegramLink();
-    }, 3000); // Adjust the delay as needed
-  }
-
-  $(document).ready(function () {
-    $('select[name="college_type"]').change(function () {
-      $('.conditional-fields').hide();
-      $('#' + $(this).val()).show();
-    });
-
-    $('select[name="college_type"]').change();
-
-    $('select[name="working"]').change(function () {
-      if ($(this).val() === "Yes") {
-        $('#workingYesFields').show();
-      } else {
-        $('#workingYesFields').hide();
-      }
-    });
-  });
+ <script src="js/registrationform.js">
+  
 </script>
 </body>
 
