@@ -20,7 +20,20 @@
     padding-bottom: 150px;
 
   }
+  .map_container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 75%; /* Adjust this value based on the desired aspect ratio */
+    height: 0;
+  }
 
+  .map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   .about_section .img-box {
     margin: 0 5%;
   }

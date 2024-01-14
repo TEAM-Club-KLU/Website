@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -31,52 +32,11 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
   <!-- Consolidated CSS for contact and registration forms -->
-  <link rel="stylesheet" href="css/registration_form.css" />
+ <link rel="stylesheet" href="css/registration_form.css" />
 </head>
 
 <body class="sub_page">
-    <div class="hero_area">
-        <!-- header section starts -->
-        <header class="header_section">
-          <div class="container">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="">
-                <span>
-                  TEach A Machine Club (TEAM)
-                </span>
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                  <ul class="navbar-nav  ">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="404.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="register.html">Register</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
-        <!-- end header section -->
-      </div>
+
   <!-- Add your existing body content here -->
 
   <!-- registration section -->
@@ -107,42 +67,40 @@
               </select>
             </div>
 
-            <!-- College Specific Fields -->
-            <div class="conditional-fields" id="collegeSpecificFields">
-              <!-- For KLU -->
-              <div class="college-type-fields" id="KLU">
-                <div>
-                  <label>KLU ID Number</label>
-                  <input type="text" name="klu_id" placeholder="KLU ID Number" />
-                </div>
-                <div>
-                  <label>Year</label>
-                  <input type="text" name="year" placeholder="Year" />
-                </div>
-                <div>
-                  <label>Branch</label>
-                  <input type="text" name="branch" placeholder="Branch" />
-                </div>
+            <!-- For KLU -->
+            <div class="conditional-fields" id="KLU">
+              <div>
+                <label>KLU ID Number</label>
+                <input type="text" name="klu_id" placeholder="KLU ID Number" />
               </div>
-              <!-- For Other College -->
-              <div class="college-type-fields" id="Other">
-                <div>
-                  <label>College Name</label>
-                  <input type="text" name="college_name" placeholder="College Name" />
-                </div>
-                <div>
-                  <label>Year</label>
-                  <input type="text" name="year" placeholder="Year" />
-                </div>
-                <div>
-                  <label>Branch</label>
-                  <input type="text" name="branch" placeholder="Branch" />
-                </div>
+              <div>
+                <label>Year</label>
+                <input type="text" name="year" placeholder="Year" />
+              </div>
+              <div>
+                <label>Branch</label>
+                <input type="text" name="branch" placeholder="Branch" />
               </div>
             </div>
 
-            <!-- Contributor Specific Fields -->
-            <div class="conditional-fields" id="contributorSpecificFields">
+            <!-- For Other College -->
+            <div class="conditional-fields" id="Other">
+              <div>
+                <label>College Name</label>
+                <input type="text" name="college_name" placeholder="College Name" />
+              </div>
+              <div>
+                <label>Year</label>
+                <input type="text" name="year" placeholder="Year" />
+              </div>
+              <div>
+                <label>Branch</label>
+                <input type="text" name="branch" placeholder="Branch" />
+              </div>
+            </div>
+
+            <!-- For Contributor -->
+            <div class="conditional-fields" id="Contributor">
               <div>
                 <label>Purpose</label>
                 <input type="text" name="purpose" placeholder="State the Purpose" />
@@ -178,12 +136,13 @@
               <label>Github Username</label>
               <input type="text" name="github_username" placeholder="Github Username" required />
             </div>
+            <!-- Kaggle Username -->
             <div>
               <label>Kaggle Username</label>
               <input type="text" name="kaggle_username" placeholder="Kaggle Username" />
             </div>
 
-            <!-- Knowledge Level Questions -->
+            <!-- Questions about AI, ML, DL, and Data Science -->
             <div>
               <label>How much do you know about AI?</label>
               <select name="ai_knowledge" required>
@@ -193,31 +152,57 @@
                 <option value="Advanced">Advanced</option>
               </select>
             </div>
-            <!-- Similar questions for ML, DL, and Data Science -->
-
-            <!-- Display Telegram link after submission -->
-            <div class="conditional-fields" id="telegramLink" style="display:none;">
-              <p id="telegramMessage">Thank you for registering! Join our Telegram group: <a
-                  href="TELEGRAM_GROUP_LINK" target="_blank"><img src="YOUR_GROUP_LOGO_URL"
-                    alt="Group Logo"></a></p>
+            <div>
+              <label>How much do you know about ML?</label>
+              <select name="ml_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div>
+              <label>How much do you know about DL?</label>
+              <select name="dl_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div>
+              <label>How much do you know about Data Science?</label>
+              <select name="data_science_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
             </div>
 
-            <!-- Loading GIF Modal -->
+               <!-- Display Telegram link after submission -->
+               <div class="conditional-fields" id="telegramLink" style="display:none;">
+                <p id="telegramMessage">Thank you for registering! Join our Telegram group: <a
+                    href="TELEGRAM_GROUP_LINK" target="_blank"><img src="YOUR_GROUP_LOGO_URL"
+                      alt="Group Logo"></a></p>
+              </div>
+  
+              <!-- Loading GIF Modal -->
             <div id="loadingModal">
               <!-- Your Giphy loading GIF -->
               <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
                 <iframe src="https://giphy.com/embed/LR5ZBwZHv02lmpVoEU" width="100%" height="100%"
                   style="position: absolute;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
               </div>
-              <p>Loading...</p>
+              <p>Submitting...</p>
             </div>
 
             <!-- Telegram Link Modal -->
             <div class="conditional-fields" id="telegramLinkModal" style="display:none;">
-              <!-- Telegram link content -->
-              <p id="telegramMessage">Thank you for registering! Join our Telegram group: <a
-                  href="TELEGRAM_GROUP_LINK" target="_blank"><img src="YOUR_GROUP_LOGO_URL"
-                    alt="Group Logo"></a></p>
+              <p>Thank you for registering! Join our Telegram group:</p>
+              <a href="TELEGRAM_GROUP_LINK" target="_blank">
+                <img src="YOUR_GROUP_LOGO_URL" alt="Group Logo">
+              </a>
             </div>
 
             <!-- Error Message -->
@@ -226,23 +211,9 @@
             <div class="d-flex">
               <button type="button" onclick="validateAndSubmit()" class="pale-button">REGISTER</button>
             </div>
+
           </form>
-          <br> <br>
         </div>
-        <div class="col-md-6">
-          <div class="map_container">
-              <div class="embed-responsive embed-responsive-16by9" style="height: 70vh;" style="margin-top: 20px;">
-                  <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d422.88544319855714!2d80.62365978648361!3d16.4405325734678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f108f59638dd%3A0xbc39f2ad782670bd!2sR%26D(ECE)%20Block!5e0!3m2!1sen!2sin!4v1696070292265!5m2!1sen!2sin" 
-                      width="100%" 
-                      height="500" 
-                      style="border:0;" 
-                      allowfullscreen="" 
-                      loading="lazy" 
-                      referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-              </div>
-          </div>
-      </div>
       </div>
     </div>
   </section>
@@ -275,10 +246,10 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
 
-  <!-- Script to show/hide conditional fields and display loading GIF Modal -->
-  <script src="js/registrationform.js"></script>
-
-  <!-- Add your existing scripts for slider and other functionalities -->
+ <!-- Script to show/hide conditional fields and display loading GIF Modal -->
+ <script src="js/registrationform.js">
+  
+</script>
 </body>
 
 </html>
