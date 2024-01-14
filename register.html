@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta name="author" content="Subhang Mokkarala">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>TEach A Machine Club</title>
+  <link rel="icon" type="image/x-icon" href="/images/Team_logo.png">
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Consolidated CSS for contact and registration forms -->
+ <link rel="stylesheet" href="css/registration_form.css" />
+</head>
+
+<body class="sub_page">
+
+  <!-- Add your existing body content here -->
+
+  <!-- registration section -->
+  <section class="registration_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Register Now</h2>
+        <img src="images/registration.png" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form action="PASTE_YOUR_GOOGLE_FORM_URL_HERE" method="POST">
+            <!-- Basic Information -->
+            <div>
+              <label>Name</label>
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div>
+              <label>Who are You?</label>
+              <select name="college_type" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="KLU">KLU</option>
+                <option value="Other">Other College</option>
+                <option value="Contributor">Contributor</option>
+                <option value="Visitor">Visitor</option>
+              </select>
+            </div>
+
+            <!-- For KLU -->
+            <div class="conditional-fields" id="KLU">
+              <div>
+                <label>KLU ID Number</label>
+                <input type="text" name="klu_id" placeholder="KLU ID Number" />
+              </div>
+              <div>
+                <label>Year</label>
+                <input type="text" name="year" placeholder="Year" />
+              </div>
+              <div>
+                <label>Branch</label>
+                <input type="text" name="branch" placeholder="Branch" />
+              </div>
+            </div>
+
+            <!-- For Other College -->
+            <div class="conditional-fields" id="Other">
+              <div>
+                <label>College Name</label>
+                <input type="text" name="college_name" placeholder="College Name" />
+              </div>
+              <div>
+                <label>Year</label>
+                <input type="text" name="year" placeholder="Year" />
+              </div>
+              <div>
+                <label>Branch</label>
+                <input type="text" name="branch" placeholder="Branch" />
+              </div>
+            </div>
+
+            <!-- For Contributor -->
+            <div class="conditional-fields" id="Contributor">
+              <div>
+                <label>Purpose</label>
+                <input type="text" name="purpose" placeholder="State the Purpose" />
+              </div>
+              <div>
+                <label>Are you currently working?</label>
+                <select name="working" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+
+              <!-- If working is Yes -->
+              <div class="conditional-fields" id="workingYesFields">
+                <div>
+                  <label>Working Field</label>
+                  <input type="text" name="working_field" placeholder="Working Field" />
+                </div>
+                <div>
+                  <label>Specialization and Interest</label>
+                  <input type="text" name="specialization_interest" placeholder="Specialization and Interest" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Common Fields -->
+            <div>
+              <label>Email</label>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div>
+              <label>Github Username</label>
+              <input type="text" name="github_username" placeholder="Github Username" required />
+            </div>
+            <!-- Kaggle Username -->
+            <div>
+              <label>Kaggle Username</label>
+              <input type="text" name="kaggle_username" placeholder="Kaggle Username" />
+            </div>
+
+            <!-- Questions about AI, ML, DL, and Data Science -->
+            <div>
+              <label>How much do you know about AI?</label>
+              <select name="ai_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div>
+              <label>How much do you know about ML?</label>
+              <select name="ml_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div>
+              <label>How much do you know about DL?</label>
+              <select name="dl_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+            <div>
+              <label>How much do you know about Data Science?</label>
+              <select name="data_science_knowledge" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+
+               <!-- Display Telegram link after submission -->
+               <div class="conditional-fields" id="telegramLink" style="display:none;">
+                <p id="telegramMessage">Thank you for registering! Join our Telegram group: <a
+                    href="TELEGRAM_GROUP_LINK" target="_blank"><img src="YOUR_GROUP_LOGO_URL"
+                      alt="Group Logo"></a></p>
+              </div>
+  
+              <!-- Loading GIF Modal -->
+            <div id="loadingModal">
+              <!-- Your Giphy loading GIF -->
+              <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+                <iframe src="https://giphy.com/embed/LR5ZBwZHv02lmpVoEU" width="100%" height="100%"
+                  style="position: absolute;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              </div>
+              <p>Submitting...</p>
+            </div>
+
+            <!-- Telegram Link Modal -->
+            <div class="conditional-fields" id="telegramLinkModal" style="display:none;">
+              <p>Thank you for registering! Join our Telegram group:</p>
+              <a href="TELEGRAM_GROUP_LINK" target="_blank">
+                <img src="YOUR_GROUP_LOGO_URL" alt="Group Logo">
+              </a>
+            </div>
+
+            <!-- Error Message -->
+            <p class="error-message" id="errorMessage"></p>
+
+            <div class="d-flex">
+              <button type="button" onclick="validateAndSubmit()" class="pale-button">REGISTER</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end registration section -->
+
+  <!-- Your existing info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <!-- Your existing content for the info section here -->
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- Your existing footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-9 mx-auto">
+          <p>
+            &copy; 2023 All Rights Reserved By
+            <a href="#">TEAM Club</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer section -->
+
+  <!-- Add your existing script tags here -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+ <!-- Script to show/hide conditional fields and display loading GIF Modal -->
+ <script src="js/registrationform.js">
+  
+</script>
+</body>
+
+</html>
